@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tauri App</title>
+  <script type="module" src="/supabaseconfig.js" defer></script>
+  <script src="/main.js" defer></script>
+  <style>
+    .logo.vanilla:hover {
+      filter: drop-shadow(0 0 2em #ffe21c);
+    }
+  </style>
+</head>
+
+<body>
+<div id="app">
+  <h2>Employee Database <button id="addEntryBtn" onclick="openModal('employeeFormModal')">Add Entry</button></h2>
+
+  <table id="employeeTable">
+    <thead>
+    <tr>
+      <th>No</th>
+      <th>Name</th>
+      <th>ID</th>
+      <th>Age</th>
+      <th>Post</th>
+      <th>Salary</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Table rows will be dynamically added here -->
+    </tbody>
+  </table>
+
+  <!-- Modal for Employee Form -->
+  <div id="employeeFormModal" class="modal">
+    <div class="modal-content">
+      <h3>Add/Edit Employee</h3>
+      <form id="employeeForm">
+        <input type="hidden" id="entryNo" />
+        <input type="text" placeholder="Name" id="name" required />
+        <input type="text" placeholder="ID" id="id" required />
+        <input type="number" placeholder="Age" id="age" required />
+        <input type="text" placeholder="Post" id="post" required />
+        <input type="number" placeholder="Salary" id="salary" required />
+        <button type="button" id="saveButton" onclick="saveEmployee()">Save</button>
+        <button type="button" class="close-btn" onclick="closeModal('employeeFormModal')">Cancel</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+</html>
