@@ -1,12 +1,7 @@
 // Import the Supabase client
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 
-// Initialize Supabase client with project URL and API key
-/*const supabaseUrl = 'https://ghwxqwvwklxmbptnairo.supabase.co'; // Replace with your Supabase project URL
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imdod3hxd3Z3a2x4bWJwdG5haXJvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDU0MjE3MTQsImV4cCI6MjAyMDk5NzcxNH0.jHRSOPceH5hf3aWYu_DRpSvbAtXE1b4yL_63BF4rXeI'; // Replace with your Supabase API key
-const supabase = createClient(supabaseUrl, supabaseKey);*/
-
-const supabase = createClient('https://ghwxqwvwklxmbptnairo.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imdod3hxd3Z3a2x4bWJwdG5haXJvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDU0MjE3MTQsImV4cCI6MjAyMDk5NzcxNH0.jHRSOPceH5hf3aWYu_DRpSvbAtXE1b4yL_63BF4rXeI', {
+const supabase = createClient('', '', {
     global: { fetch: fetch.bind(globalThis) }
 })
 
